@@ -2,17 +2,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
+
 body {
   font-family: "Open Sans", serif;
 }
 
-::placeholder {
-  color: #8b9dc3;
-}
-
 .wrapper {
   /*background: linear-gradient(to right, #35336b, #091e36);*/
-  background: url('img/dawn.jpg') center center no-repeat;
+  background:
+    linear-gradient(
+        rgba(0, 0, 20, 0.6), 
+        rgba(0, 0, 20, 0.6)
+      ), 
+    url('img/dawn.jpg') center center no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -79,15 +81,16 @@ input[type="text"] {
   margin-bottom: 30px;
   margin-right: 20px;
   font-size: 20px;
-}
-
-input[type="text"] { 
-    outline: none;
+  outline: none;
 }
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
     -webkit-text-fill-color: #fff !important;
+}
+
+::placeholder {
+  color: #8b9dc3;
 }
 
 button {

@@ -27,7 +27,7 @@ class App extends React.Component {
 		const data = await api_call.json();
 		
 		// check if input actually has a value
-		if (city && country) {
+		if (city && country && data.cod === 200) {
 			console.log(data);
 			this.setState({
 				temperature: data.main.temp,
@@ -46,7 +46,7 @@ class App extends React.Component {
 				humidity: undefined,
 				windSpeed: undefined,
 				description: undefined,
-				error: "Please enter a City and Country"
+				error: "Please enter a valid City and Country"
 			})
 		}
 	}
@@ -58,7 +58,7 @@ class App extends React.Component {
 					<div className="main">
 						<div className="container">
 							<div className="row">
-								<div className="col-xs-5 pull-left title-container">
+								<div className="col-xs-5 title-container">
 									<Titles />
 								</div>
 								<div className="col-xs-7 form-container">
